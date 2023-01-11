@@ -11,4 +11,8 @@ const StartGameScreen=(props)=>{
     )
 }
 
+const styles =StyleSheet.create({
+    inputStyle
+})
+
 export default StartGameScreen
