@@ -8,7 +8,7 @@ const PrimaryButton=(props)=>{
 
     return(
         <Pressable onPress={pressHandler}>
-        <View style={styles.btnContainer}>
+        <View style={styles.btnContainer} android_ripple={{color:'#ffffff'}}>
             <Text style={styles.btnTeksto}>{props.children}</Text>
         </View>
         </Pressable>
@@ -20,12 +20,14 @@ export default PrimaryButton
 
 const styles=StyleSheet.create({
     btnContainer:{
-        backgroundColor:'#25979c',
+        backgroundColor:'#52174B',
         borderRadius: 28,
         padding:10,
         margin:10
     },
     btnTeksto:{
-        textAlign:'center'
+        textAlign:'center',
+        color:'#ffffff',
+        fontSize:18
     }
 })

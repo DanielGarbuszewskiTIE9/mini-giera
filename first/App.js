@@ -1,18 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import StartGameScreen from './UI/StartGameScreen';
+import {LinearGradient} from 'expo-linear-gradient'
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={['#52174B','#DA18C4']} style={styles.container}>
+      <ImageBackground 
+      source={require('./assets/typiara_i_mikrofala.jpg')} 
+      resizeMode='cover' imageStyle={{opacity:0.5}} style={styles.container}>
+      
       <StartGameScreen />
-    </View>
+      </ImageBackground>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
   },
 });
