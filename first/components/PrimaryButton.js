@@ -2,13 +2,9 @@ import { View, Text,Pressable,StyleSheet } from 'react-native'
 
 const PrimaryButton=(props)=>{
 
-    function pressHandler(){
-        console.log('la')
-    }
-
     return(
-        <Pressable onPress={pressHandler}>
-        <View style={styles.btnContainer} android_ripple={{color:'#ffffff'}}>
+        <Pressable onPress={props.pressHandler} android_ripple={{color:'#BF29AC'}}>
+        <View style={styles.btnContainer}>
             <Text style={styles.btnTeksto}>{props.children}</Text>
         </View>
         </Pressable>
